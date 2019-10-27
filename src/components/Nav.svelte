@@ -10,7 +10,7 @@
 
 <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://github.com/ejolly/pymer4">
+    <a class="navbar-item" href="https://github.com/ejolly/create-svelte-app">
       <img alt='' src="https://bulma.io/images/bulma-logo-white.png" width="112" height="28">
     </a>
     {#each route_names as route}
