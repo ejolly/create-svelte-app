@@ -1,0 +1,7 @@
+# Ignore README files
+**/README.md
+
+# Ignore artifacts:
+public/build/
+
+scripts/setupTypeScript.js
