@@ -42,9 +42,9 @@ export default {
     file: 'public/build/bundle.js',
   },
   plugins: [
-    // Expose a DEV_MODE variable to the app knows if its production or not
+    // Expose a DEV variable to the app knows if its production or not
     replace({
-      DEV_MODE: !production,
+      DEV: !production,
     }),
     svelte({
       // setting postcss: true in sveltePreprocess operates in 'auto mode'

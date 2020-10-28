@@ -17,13 +17,16 @@ This repo serves as a frontend/static Svelte app project starter to quickly scaf
 3. `npm install`
 4. `npm run dev` and navigate to `localhost:5000` in your browser
 
-
 ## What's Included and Configured
 
 - [Tailwindcss](https://tailwindcss.com/) for styling, with [purging](https://github.com/FullHuman/purgecss) of unused styles for production
 - [ESlint](https://eslint.org/) for linting, based on the [airbnb config](https://www.npmjs.com/package/eslint-config-airbnb)
 - [Prettier](https://prettier.io/) for formatting configured to work with svelte
 - [Husky](https://github.com/typicode/husky) to auto-check styles pre-commit
+- A special global `DEV` variable available for use anywhere in the app (no `import` required) that resolves to `true` when built and served/deployed for production (server launched with `npm run build && yourServer public`) and `false` when built for development (server launched with `npm run dev`).
+  - This can be super handy when you want to inject some debug behavior into your app while you're working, but not in production without having to read/load configuration variables and files.
+  - Just write the code once and wrap it in a `if (DEV){}` block to run only during development
+  - `DEV` works because of `@rollup/plugin-replace` which literally does a string replacement based upon how rollup was initialized. This means you can't "react" or "observe" this variable. It's injected when the app is compiled.
 
 ## VSCode Configuration
 

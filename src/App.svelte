@@ -1,7 +1,7 @@
 <script>
   import Tailwindcss from './Tailwindcss.svelte';
 
-  if (DEV_MODE) {
+  if (DEV) {
     console.log('Running in dev mode');
   } else {
     console.log('Running in production');
