@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+import sveltePreprocess from 'svelte-preprocess';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -41,6 +42,13 @@ export default {
   },
   plugins: [
     svelte({
+      // setting postcss: true in sveltePreprocess operates in 'auto mode'
+      // this means it assumes postcss-load-config is installed as a dependency
+      // and expects to find a postcss.config.js file to load
+      // otherwise we would need a rollup postcss plugin or to pass in a specific parser
+      // globalStyle: true allows us to use <style global> in a svelte components
+      // rather than being restricted to Svelte's :global() pseudo-selector
+      preprocess: sveltePreprocess({ postcss: true, globalStyle: true }),
       // enable run-time checks when not in production
       dev: !production,
       // we'll extract any component CSS out into

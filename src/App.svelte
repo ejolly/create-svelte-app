@@ -4,34 +4,30 @@
 
 <style>
   main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
+    @apply max-w-sm;
   }
 
   @media (min-width: 640px) {
     main {
-      max-width: none;
+      @apply max-w-none;
     }
+  }
+
+  a:hover {
+    @apply underline;
   }
 </style>
 
 <!-- Import tailwind into the app  -->
 <Tailwindcss />
 
-<main class="text-red-400 bg-blue-400">
-  <h1>Hello World!</h1>
-  <p>
+<main class="max-w-xs p-12 mx-auto my-2 text-center">
+  <h1 class="mb-6 text-6xl font-hairline text-red-500 uppercase">
+    Hello World!
+  </h1>
+  <p class="text-gray-800">
     Visit the
-    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
+    <a class="text-blue-700" href="https://svelte.dev/tutorial">Svelte tutorial</a>
     to learn how to build Svelte apps.
   </p>
 </main>

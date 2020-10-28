@@ -1,1 +1,4 @@
 /* These might conflict with tailwindcss styles so be careful */
+body {
+  postion: relative;
+}
