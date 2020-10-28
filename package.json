@@ -16,6 +16,11 @@
     "format": "prettier '**/*.{ts,js,json,css,svelte}' --plugin-search-dir=. --write",
     "test:format": "prettier '**/*.{ts,js,json,css,svelte}' --plugin-search-dir=. --check"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test:format"
+    }
+  },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "@rollup/plugin-commonjs": "^14.0.0",
@@ -28,6 +33,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-svelte3": "^2.7.3",
+    "husky": "^4.3.0",
     "postcss": "^8.1.4",
     "postcss-load-config": "^3.0.0",
     "prettier": "^2.1.2",
