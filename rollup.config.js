@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
+import replace from '@rollup/plugin-replace';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -41,6 +42,10 @@ export default {
     file: 'public/build/bundle.js',
   },
   plugins: [
+    // Expose a DEV_MODE variable to the app knows if its production or not
+    replace({
+      DEV_MODE: !production,
+    }),
     svelte({
       // setting postcss: true in sveltePreprocess operates in 'auto mode'
       // this means it assumes postcss-load-config is installed as a dependency
