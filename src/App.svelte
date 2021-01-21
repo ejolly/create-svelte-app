@@ -1,5 +1,7 @@
 <script>
   import Tailwindcss from './Tailwindcss.svelte';
+  // Import and use firebase like this
+  // import { db } from './db_config.js';
 
   if (DEV) {
     console.log('Running in dev mode');

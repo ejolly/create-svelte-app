@@ -47,6 +47,7 @@
     "tailwindcss": "^1.9.6"
   },
   "dependencies": {
+    "firebase": "^8.2.4",
     "sirv-cli": "^1.0.6"
   }
 }

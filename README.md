@@ -1,14 +1,13 @@
-# Svelte App Project Starter
+# Svelte App Project Starter (w/ Firebase)
   
 This repo serves as a frontend/static Svelte app project starter to quickly scaffold a new svelte app without worrying about how to configure add-ins and bundling. 
 
-- [Svelte App Project Starter](#svelte-app-project-starter)
-  - [Quick start](#quick-start)
-  - [What's Included and Configured](#whats-included-and-configured)
-  - [VSCode Configuration](#vscode-configuration)
-  - [Deploying](#deploying)
-  - [Variants](#variants)
-  - [Notes](#notes)
+- [Quick start](#quick-start)
+- [What's Included and Configured](#whats-included-and-configured)
+- [VSCode Configuration](#vscode-configuration)
+- [Deploying](#deploying)
+- [Variants](#variants)
+- [Notes](#notes)
 
 ## Quick start
 
@@ -19,6 +18,7 @@ This repo serves as a frontend/static Svelte app project starter to quickly scaf
 
 ## What's Included and Configured
 
+- [Firebase](https://firebase.google.com) for a "serverless" real-time database
 - [Tailwindcss](https://tailwindcss.com/) for styling, with [purging](https://github.com/FullHuman/purgecss) of unused styles for production
 - [ESlint](https://eslint.org/) for linting, based on the [airbnb config](https://www.npmjs.com/package/eslint-config-airbnb)
 - [Prettier](https://prettier.io/) for formatting configured to work with svelte
@@ -53,8 +53,8 @@ Now any new pushes to your `master` branch will automatically update live!
 
 The `master` branch of this repo serves as the *Base* configuration for a few other scaffolds. Feel free to submit your own template after forking from `master`.
 
-- Base + [Firebase](https://github.com/ejolly/create-svelte-app/tree/firebase)
-- Base + [NeDB](https://github.com/ejolly/create-svelte-app/tree/nedb)
+- [Base](https://github.com/ejolly/create-svelte-app)  
+- [Base + NeDB](https://github.com/ejolly/create-svelte-app/tree/nedb)
 - [Version 1](https://github.com/ejolly/create-svelte-app/tree/v1) (*this is the only variant that does not build on top of Base:* bulma, svelma, font-awesome, svelte-router-spa, firebase, babel/core-js)
 
 ---
